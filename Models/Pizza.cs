@@ -12,7 +12,7 @@ namespace RazorPagesPizza.Models
         public bool IsGlutenFree { get; set; }
 
         [Range(0.01, 9999.99)]
-        public double Price { get; set; }
+        public decimal Price { get; set; }
     }
 }
 public enum PizzaSize { Small, Medium, Large }
