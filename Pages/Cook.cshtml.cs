@@ -7,22 +7,23 @@ namespace MyApp.Namespace
 {
     public class CookModel : PageModel
     {
-        public Cook? cook;
-        public void OnGet()
+        public Cook cook;
+        public void OnGet(string name)
         {
-            cook = CookService.Get(0);
+            cook = CookService.Get(name);
         }
+        public CookModel()
+        {
+            cook = CookService.Get("Jane");
+        }
+
         public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
             {
                 return Page();
             }
-            CookService.Add(NewCook);
             return RedirectToAction("Get");
         }
-
-        [BindProperty]
-        public Cook NewCook { get; set; } = new();
     }
 }

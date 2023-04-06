@@ -1,6 +1,7 @@
-﻿@page
+﻿@page "{name?}"
 @model MyApp.Namespace.CookModel
 @{
     ViewData["Title"] = "Error";
 }
-<h1>Strona Kucharza @Model.cook.Surname</h1>
+<h1>Strona Kucharza @Model.cook.Name @Model.cook.Surname</h1>
+<p>Wypłata : @Model.cook.Salary</p>
