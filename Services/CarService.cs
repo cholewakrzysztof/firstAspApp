@@ -7,6 +7,7 @@ namespace RazorPagesPizza.Services{
     {
         private static List<CarMark> Marks;
         private static CarMark DefaultMark = new CarMark();
+        private static Car DefaultCar = new Car();
 
         static CarService()
         {
@@ -38,6 +39,21 @@ namespace RazorPagesPizza.Services{
                     return Mark.Models;
             }
             return DefaultMark.Models;
+        }
+
+        public static Car GetCar(string MarkName, string Model){
+            foreach (CarMark Mark in Marks.DefaultIfEmpty<CarMark>(DefaultMark))
+            {
+                if(Mark.Name == MarkName)
+                {
+                    foreach (var car in Mark.Models)
+                    {
+                        if(car.Model==Model)
+                            return car;
+                    }
+                }
+            }
+            return DefaultCar;
         }
     }
 }

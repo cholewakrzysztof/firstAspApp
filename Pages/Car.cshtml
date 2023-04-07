@@ -1,4 +1,14 @@
-﻿@page
+﻿@page "{name?}/{model?}"
 @model MyApp.Namespace.CarModel
 @{
 }
+<h1>@Model.car.Model</h1>
+<p>@Model.car.Engine.HorsePower</p>
+<p>@Model.car.Engine.Capacity</p>
+<p>@Model.car.Engine.CatalogNumber</p>
+
+<p>@Model.car.Brake.Model</p>
+<p>@Model.car.Brake.Mark</p>
+<p>@Model.car.Brake.CatalogNumber</p>
+
+

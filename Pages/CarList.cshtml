@@ -9,20 +9,20 @@
     <tr>
         <td>@Mark.Name</td>
     </tr>
-    @foreach (var Car in Mark.Models)
+    @foreach (var car in Mark.Models)
     {
         
         <tr>
             <tr>
-                <td><a asp-area="" asp-page="Car" asp-route-name="@Car.Model">@Car.Model </a></td>
+                <td><a asp-area="" asp-page="Car" asp-route-name="@Mark.Name" asp-route-model="@car.Model">@car.Model</a></td>
             </tr>
             <tr>
                 <td>Horse Power</td>
-                <td>@Car.Engine.HorsePower</td>
+                <td>@car.Engine.HorsePower</td>
             </tr>
             <tr>
                 <td>Engine Capacity</td>
-                <td>@Car.Engine.Capacity</td>
+                <td>@car.Engine.Capacity</td>
             </tr>
         </tr>
        
