@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\ASP.NET\RazorPagesPizza
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/ASP.NET/RazorPagesPizza/Pages/Car.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/ASP.NET/RazorPagesPizza/Pages/CarList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FyTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

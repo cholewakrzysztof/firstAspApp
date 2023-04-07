@@ -2,3 +2,31 @@
 @model MyApp.Namespace.CarListModel
 @{
 }
+
+@foreach (var Mark in Model.Marks)
+{
+    <table>
+    <tr>
+        <td>@Mark.Name</td>
+    </tr>
+    @foreach (var Car in Mark.Models)
+    {
+        
+        <tr>
+            <tr>
+                <td><a asp-area="" asp-page="Car" asp-route-name="@Car.Model">@Car.Model </a></td>
+            </tr>
+            <tr>
+                <td>Horse Power</td>
+                <td>@Car.Engine.HorsePower</td>
+            </tr>
+            <tr>
+                <td>Engine Capacity</td>
+                <td>@Car.Engine.Capacity</td>
+            </tr>
+        </tr>
+       
+    }
+    </table>
+}
+

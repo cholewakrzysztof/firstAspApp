@@ -1,19 +1,16 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using  RazorPagesPizza.Models.CarPart;
 
-namespace RazorPagesPizza{
+namespace RazorPagesPizza.Models{
     public class Car
     {
+        public string? PictureSoure {get;set;}
+
         [Required]
-        public int id_auto;
-        public string marka;
-        public string kolor;
-        public string nr_rej;
-        public int przebieg;
-        public int cena_pln;
-        public int cena_eu;
-        public int rok_prod;
-        public double pojemnnosc;
-        public Paliwo paliwo;
+        public string? Model {get;set;}
+        public Brake? Brake {get;set;}
+        public Engine? Engine {get;set;}
+        
     }
     public enum Paliwo{benzyna,diesel}
 }
